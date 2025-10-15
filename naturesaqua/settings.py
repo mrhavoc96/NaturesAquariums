@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-+(xfx%0vn1@ax$00rmy9$76qs5q9a8p#9sc%uor-$vp=&zd4ml'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 TIME_ZONE = 'Asia/Kolkata'
 
@@ -46,6 +46,17 @@ INSTALLED_APPS = [
     'cloudinary_storage',
 ]
 
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'dv6jnsrxq',
+    'API_KEY': '187844327398482',
+    'API_SECRET': 'DQqN0dcbXRRsv7H9vrhF6zCp_TA'
+}
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -57,7 +68,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'naturesaqua.urls'
-
+ 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
