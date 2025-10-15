@@ -40,6 +40,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'inventory',   #custom app for inventory
+
+    # Cloudinary apps
+    'cloudinary',
+    'cloudinary_storage',
 ]
 
 MIDDLEWARE = [
