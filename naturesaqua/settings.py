@@ -40,17 +40,15 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'inventory',   #custom app for inventory
-
-    # Cloudinary apps
     'cloudinary',
     'cloudinary_storage',
 ]
 
 
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'dv6jnsrxq',
-    'API_KEY': '187844327398482',
-    'API_SECRET': 'DQqN0dcbXRRsv7H9vrhF6zCp_TA'
+    'CLOUD_NAME': os.getenv('CLOUDINARY_CLOUD_NAME'),
+    'API_KEY': os.getenv('CLOUDINARY_API_KEY'),
+    'API_SECRET': os.getenv('CLOUDINARY_API_SECRET')
 }
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
